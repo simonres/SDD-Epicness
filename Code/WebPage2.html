@@ -1,16 +1,18 @@
 <html>
-<head>
-</head>
+button {
+	color: blue;
+	background:lightgrey;
+	border: 1px solid #000;
+	border-radius: 8px;
+	position: center;
+}
 
-<style>
-body {background-color: lightblue}
-h1 {color:blue}
-</style>
+<button style="height: 50.0px;width: 100.0px;"><img src="arrows.png" style="height: 40.0px;"></button>
 
-<body>
-<div style="text-align:center">
-<h1>MJRoBot RPi Web Robot Control</h1>
-<br><br>
-<img src="/WebImages/PerfectHand.jpg">
-</body>
+    function lighton()
+    {
+        xmlhttp.open("GET","movements/forwards.cgi",true);
+        xmlhttp.send();
+    }
+
 </html>
