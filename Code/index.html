@@ -4,24 +4,15 @@
 </head>
 
 <style>
-body {background-color: lightyellow}
+body {background-color: lightblue}
 h1 {color:blue}
-
-button {
-	color: blue;
-	background:lightgrey;
-	border: 1px solid #000;
-	border-radius: 8px;
-	position: center;
-}
-
 </style>
 
 <body>
 <div style="text-align:center">
-<h1> MJRoBot RPi Web Robot Control   <img style="height: 100px"src="/images/okhand.jpeg"> </h1>
+<h1> The future is now - Simóns Software Design and Development Project   <img style="height: 100px"src="/images/okhand.jpeg"> </h1>
 <br><br>
-<span style="display:inline-block;padding:5px;border:1px solid #fc0; font-size: 140%;font-weight: bold;">
+
 <br>
 <button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px"src="/images/arrows.png"></button>
 <br><br><br><br>
@@ -34,8 +25,17 @@ button {
 <img hspace="10" style="padding-left: 5px">
 <br><br><br><br>
 <button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px"src="/images/arrows.png"></button>
-
-
+<br><br><br>
+<p>Speeeeeeeed Control</p>
+<img hspace="10" style="padding-left: 5px">
+<button style="height: 50px; width: 50px; font-size: 18px" onclick="nospeed()">0</button>
+<img hspace="30" style="padding-left: 20px">
+<button style="height: 50px; width: 50px; font-size: 18px" onclick="lowspeed()">1</button>
+<img hspace="30" style="padding-left: 20px">
+<button style="height: 50px; width: 50px; font-size: 18px" onclick="regularspeed()">2</button>
+<img hspace="30" style="padding-left: 20px">
+<button style="height: 50px; width: 50px; font-size: 18px" onclick="highspeed()">3</button>
+<img hspace="10" style="padding-left: 5px">
 <br><br>
 </span>
 
@@ -47,7 +47,7 @@ xmlhttp=new XMLHttpRequest();
 
 function forward()
 {
-	xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+	xmlhttp.open("GET","cgi-bin/forwards.cgi",true);
 	xmlhttp.send();
 }
 function stop()
@@ -70,7 +70,26 @@ function reverse()
 	xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
 	xmlhttp.send();
 }
-
+function lowspeed()
+{
+	xmlhttp.open("GET","cgi-bin/lowspeed.cgi",true);
+	xmlhttp.send();
+}
+function regularspeed()
+{
+	xmlhttp.open("GET","cgi-bin/regularspeed.cgi",true);
+	xmlhttp.send();
+}
+function highspeed()
+{
+	xmlhttp.open("GET","cgi-bin/highspeed.cgi",true);
+	xmlhttp.send();
+}
+function nospeed()
+{
+	xmlhttp.open("GET","cgi-bin/nospeed.cgi",true);
+	xmlhttp.send();
+}
 
 </script>
 
