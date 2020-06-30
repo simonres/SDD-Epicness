@@ -88,12 +88,6 @@
         .cnt223 .x:hover{
         cursor: pointer;
         }
-        div.horizontalgap {
-        float: left;
-       overflow: hidden;
-        height: 1px;
-        width: 0px;
-        }        
     </style>        
 </head>
 
@@ -115,28 +109,24 @@
     <br>
     <h1> EPIC ROBOT </h1>
 <br><br>
-<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px" src="images/arrowu.png"></button>
-<br><br><br>
-<img hspace="10" style="padding-left: 5px">
-<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px" src="images/arrowl.png"></button>
-<img hspace="20" style="padding-left: 10px">
-<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px" src="images/stop.png"></button>
-<img hspace="20" style="padding-left: 10px">
-<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px" src="images/arrowr.png"></button>
-<img hspace="10" style="padding-left: 5px">
-<br><br><br>
-<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px" src="images/arrowd.png"></button>
+<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px" src="images/arrowu.png" alt="up"></button>
+<br><br>
+<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px" src="images/arrowl.png" alt="←"></button>
+<span style="display:inline-block; width: 10px;"></span>
+<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px" src="images/stop.png" alt="stop"></button>
+<span style="display:inline-block; width: 10px;"></span>
+<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px" src="images/arrowr.png" alt="→"></button>
+<br><br>
+<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px" src="images/arrowd.png" alt="↓"></button>
 <br><br><br>
 <p>Speed Control</p>
-<img hspace="5" style="padding-left: 5px">
 <button class="button1" onclick="speed1()">1</button>
-<img hspace="5" style="padding-left: 20px">
+<span style="display:inline-block; width: 10px;"></span>
 <button class="button1"  onclick="speed2()">2</button>
-<img hspace="5" style="padding-left: 20px">
+<span style="display:inline-block; width: 10px;"></span>
 <button class="button1" onclick="speed3()">3</button>
-<img hspace="5" style="padding-left: 20px">
+<span style="display:inline-block; width: 10px;"></span>
 <button class="button1" onclick="speed4()">4</button>
-<img hspace="5" style="padding-left: 5px">
 <br/><br/>
 </div>
 
@@ -191,7 +181,7 @@ function nospeed()
 }
 
 </script>
-<script type="text/javascript">
+<script>
 
     document.onkeydown = function(event) {
         switch (event.keyCode) {
@@ -213,9 +203,9 @@ function nospeed()
         }
     };
 </script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="https://code.jquery.com/jquery-1.8.2.js"></script>
 
-<script type='text/javascript'>
+<script>
 $(function(){
 var overlay = $('<div id="overlay"></div>');
 overlay.show();
