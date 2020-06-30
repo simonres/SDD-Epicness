@@ -1,92 +1,102 @@
-
-<html>
+<!DOCTYPE html>
+<html lang=en>
 <head>
+    <meta charset="utf-8"/>
+    <title>EPIC ROBOT</title>
+    <style>
+        body {background-color: lightgray}
+        h1 {color:black}
+        
+        button {
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            /* outline:none; */
+        }
+        .button1 {
+            color: white;
+            background-color:#76C2AF;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            border-radius: 30px;
+            overflow: hidden;
+            font-weight: bold;
+            height: 30px; 
+            width: 30px; 
+            font-size: medium;
+        }
+        
+        /* This part is the css for the start up popup. I don't understand it */
+        #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter:alpha(opacity=70);
+        -moz-opacity:0.7;
+        -khtml-opacity: 0.7;
+        opacity: 0.7;
+        z-index: 100;
+        display: none;
+        }
+        .cnt223 a{
+        text-decoration: none;
+        }
+        .popup{
+        width: 100%;
+        margin: 0 auto;
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        }
+        .cnt223{
+        min-width: 600px;
+        width: 600px;
+        min-height: 150px;
+        margin: 100px auto;
+        background: #f3f3f3;
+        position: relative;
+        z-index: 103;
+        padding: 15px 35px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px #000;
+        }
+        .cnt223 p{
+        clear: both;
+            color: #555555;
+            /* text-align: justify; */
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .cnt223 p a{
+        color: #d91900;
+        font-weight: bold;
+        }
+        .cnt223 .x{
+        float: right;
+        height: 35px;
+        left: 22px;
+        position: relative;
+        top: -25px;
+        width: 34px;
+        }
+        .cnt223 .x:hover{
+        cursor: pointer;
+        }
+        div.horizontalgap {
+        float: left;
+       overflow: hidden;
+        height: 1px;
+        width: 0px;
+        }        
+    </style>        
 </head>
 
-<style>
-body {background-color: lightgray}
-h1 {color:black}
-
-button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    /* outline:none; */
-}
-button1 {
-    color: white;
-	background-color:#76C2AF;
-	background-repeat:no-repeat;
-	border: none;
-    cursor:pointer;
-	border-radius: 10px;
-	overflow: hidden;
-
-}
-
-<!-- This part is the css for the start up popup. I don't understand it-->
-#overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #000;
-filter:alpha(opacity=70);
--moz-opacity:0.7;
--khtml-opacity: 0.7;
-opacity: 0.7;
-z-index: 100;
-display: none;
-}
-.cnt223 a{
-text-decoration: none;
-}
-.popup{
-width: 100%;
-margin: 0 auto;
-display: none;
-position: absolute;
-z-index: 1000;
-}
-.cnt223{
-min-width: 600px;
-width: 600px;
-min-height: 150px;
-margin: 100px auto;
-background: #f3f3f3;
-position: relative;
-z-index: 103;
-padding: 15px 35px;
-border-radius: 5px;
-box-shadow: 0 2px 5px #000;
-}
-.cnt223 p{
-clear: both;
-    color: #555555;
-    /* text-align: justify; */
-    font-size: 20px;
-    font-family: sans-serif;
-}
-.cnt223 p a{
-color: #d91900;
-font-weight: bold;
-}
-.cnt223 .x{
-float: right;
-height: 35px;
-left: 22px;
-position: relative;
-top: -25px;
-width: 34px;
-}
-.cnt223 .x:hover{
-cursor: pointer;
-}
-
-</style>
 
 <body>
 <div class='popup'>
@@ -105,32 +115,29 @@ cursor: pointer;
     <br>
     <h1> EPIC ROBOT </h1>
 <br><br>
-<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px"src="/images/arrowu.png"></button>
+<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px" src="/images/arrowu.png"></button>
 <br><br><br>
 <img hspace="10" style="padding-left: 5px">
-<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px"src="/images/arrowl.png"></button>
+<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px" src="/images/arrowl.png"></button>
 <img hspace="20" style="padding-left: 10px">
-<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px"src="/images/stop.png"></button>
+<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px" src="/images/stop.png"></button>
 <img hspace="20" style="padding-left: 10px">
-<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px"src="/images/arrowr.png"></button>
+<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px" src="/images/arrowr.png"></button>
 <img hspace="10" style="padding-left: 5px">
 <br><br><br>
-<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px"src="/images/arrowd.png"></button>
+<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px" src="/images/arrowd.png"></button>
 <br><br><br>
 <p>Speed Control</p>
-    <br>
-<img hspace="10" style="padding-left: 5px">
-<button1 style="height: 50px; width: 50px; font-size: 25px" onclick="speed1()">&nbsp;1&nbsp;</button1>
-<img hspace="30" style="padding-left: 20px">
-<button1 style="height: 50px; width: 50px; font-size: 25px" onclick="speed2()">&nbsp;2&nbsp;</button1>
-<img hspace="30" style="padding-left: 20px">
-<button1 style="height: 50px; width: 50px; font-size: 25px" onclick="speed3()">&nbsp;3&nbsp;</button1>
-<img hspace="30" style="padding-left: 20px">
-<button1 style="height: 50px; width: 50px; font-size: 25px" onclick="speed4()">&nbsp;4&nbsp;</button1>
-<img hspace="10" style="padding-left: 5px">
-<br><br>
-</span>
-
+<img hspace="5" style="padding-left: 5px">
+<button class="button1" onclick="speed1()">1</button>
+<img hspace="5" style="padding-left: 20px">
+<button class="button1"  onclick="speed2()">2</button>
+<img hspace="5" style="padding-left: 20px">
+<button class="button1" onclick="speed3()">3</button>
+<img hspace="5" style="padding-left: 20px">
+<button class="button1" onclick="speed4()">4</button>
+<img hspace="5" style="padding-left: 5px">
+<br/><br/>
 </div>
 
 <script>
@@ -231,3 +238,4 @@ return false;
 });
 </script>
 </body>
+</html>
