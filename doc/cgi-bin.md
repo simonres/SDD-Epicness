@@ -38,7 +38,5 @@ sudo chmod 755 /var/www/html/cgi-bin/hello.py
 * Test that the script is working
 ```bash
 $ curl http://localhost/cgi-bin/forward.py
-
-Hello world! /var/www/html/cgi-bin/hello.py
 ```
 For a general Linux system check https://code-maven.com/set-up-cgi-with-apache
