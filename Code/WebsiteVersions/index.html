@@ -218,7 +218,8 @@ var overlay = $('<div id="overlay"></div>');
 overlay.show();
 overlay.appendTo(document.body);
 $('.popup').show();
-$('.close').click(function(){
+$('.close').click(function(){ 
+//Add Security token heres
 $('.popup').hide();
 overlay.appendTo(document.body).remove();
 return false;
