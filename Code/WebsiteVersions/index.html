@@ -130,6 +130,13 @@
 <br/><br/>
 </div>
 
+<footer style="text-align:center">
+    <script src="https://kit.fontawesome.com/d375916f0c.js" crossorigin="anonymous"></script>   
+    <a href="https://github.com/simonres/SDD-Epicness" style="font-size: 28px; color: #76C2AF"><i class="fab fa-github"></i></a>
+    <!-- <a href="https://github.com/simonres/SDD-Epicness" style="font-size: 28px; color: #76C2AF"><i class="fab fa-youtube"></i> </a> -->
+    <!-- <a href="https://github.com/simonres/SDD-Epicness" style="font-size: 28px; color: #76C2AF"><i class="fab fa-instagram"></i> </a> -->
+</footer>
+
 <script>
 var xmlhttp;
 xmlhttp=new XMLHttpRequest();
@@ -211,20 +218,17 @@ var overlay = $('<div id="overlay"></div>');
 overlay.show();
 overlay.appendTo(document.body);
 $('.popup').show();
-$('.close').click(function(){
+$('.close').click(function(){ 
+//Add Security token heres
 $('.popup').hide();
 overlay.appendTo(document.body).remove();
 return false;
 });
-
-
-
-
-$('.x').click(function(){
-$('.popup').hide();
-overlay.appendTo(document.body).remove();
-return false;
-});
+//$('.x').click(function(){
+//$('.popup').hide();
+//overlay.appendTo(document.body).remove();
+//return false;
+//});
 });
 </script>
 </body>
