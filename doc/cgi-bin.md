@@ -33,10 +33,10 @@ it is then necessary to configure the CGI directory of Apache to point to `/var/
 * Restart Apache and [check script permissions](https://askubuntu.com/a/932719/678974) of the exectuable scripts. For example `cgi-bin/forward.py`
 ```bash
 systemctl restart apache2
-sudo chmod 755 /var/www/html/cgi-bin/hello.py
+sudo chmod 755 /var/www/html/cgi-bin/forwards.cgi
 ```
 * Test that the script is working
 ```bash
-$ curl http://localhost/cgi-bin/forward.py
+$ curl http://localhost/cgi-bin/forwards.cgi
 ```
 For a general Linux system check https://code-maven.com/set-up-cgi-with-apache
